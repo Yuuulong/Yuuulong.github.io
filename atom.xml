@@ -2,38 +2,230 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yuuulong.com</id>
     <title>yuuulong</title>
-    <updated>2019-12-13T06:02:00.385Z</updated>
+    <updated>2019-12-13T09:41:16.962Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yuuulong.com"/>
     <link rel="self" href="https://yuuulong.com/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>&lt;h3&gt;温故而知新&lt;/h3&gt;</subtitle>
     <logo>https://yuuulong.com/images/avatar.png</logo>
     <icon>https://yuuulong.com/favicon.ico</icon>
     <rights>All rights reserved 2019, yuuulong</rights>
     <entry>
-        <title type="html"><![CDATA[hello]]></title>
-        <id>https://yuuulong.com/post/e_y26oAqz</id>
-        <link href="https://yuuulong.com/post/e_y26oAqz">
+        <title type="html"><![CDATA[前端基础第十四章(结）]]></title>
+        <id>https://yuuulong.com/post/XZzhJK1Pi</id>
+        <link href="https://yuuulong.com/post/XZzhJK1Pi">
         </link>
-        <updated>2019-12-13T04:04:36.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <updated>2019-12-13T09:34:48.000Z</updated>
+        <summary type="html"><![CDATA[<ul>
+<li>&lt;form&gt;元素定义了表单，所有表单输入元素都有嵌套再这个元素中。</li>
+<li>action属性包含服务器脚本的URL。</li>
+<li>method属性包含发送数据的方法，可以是POST或GET。</li>
+<li>POST打包表单数据，并把它作为请求的一部分发送到服务器。</li>
+<li>GET打包表单数据，并把数据追加到URL。</li>
+</ul>
 ]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <content type="html"><![CDATA[<ul>
+<li>&lt;form&gt;元素定义了表单，所有表单输入元素都有嵌套再这个元素中。</li>
+<li>action属性包含服务器脚本的URL。</li>
+<li>method属性包含发送数据的方法，可以是POST或GET。</li>
+<li>POST打包表单数据，并把它作为请求的一部分发送到服务器。</li>
+<li>GET打包表单数据，并把数据追加到URL。</li>
+</ul>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[hello]]></title>
-        <id>https://yuuulong.com/post/kbw-uqSgW</id>
-        <link href="https://yuuulong.com/post/kbw-uqSgW">
+        <title type="html"><![CDATA[前端基础第十三章]]></title>
+        <id>https://yuuulong.com/post/jYC4kZDMg</id>
+        <link href="https://yuuulong.com/post/jYC4kZDMg">
         </link>
-        <updated>2019-12-13T04:04:11.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <updated>2019-12-13T09:33:24.000Z</updated>
+        <summary type="html"><![CDATA[<ul>
+<li>HTML表格用来建立表格数据结构。</li>
+<li>HTML表格元素&lt;table&gt;、&lt;tr&gt;、&lt;th&gt;和&lt;td&gt;一起来创建一个表格。</li>
+<li>&lt;table&gt;元素定义并包围整个表格。</li>
+<li>表格使用&lt;tr&gt;元素按行定义。</li>
+<li>每行包含一个或多个数据单元格，分别用&lt;td&gt;元素定义。</li>
+</ul>
 ]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <content type="html"><![CDATA[<ul>
+<li>HTML表格用来建立表格数据结构。</li>
+<li>HTML表格元素&lt;table&gt;、&lt;tr&gt;、&lt;th&gt;和&lt;td&gt;一起来创建一个表格。</li>
+<li>&lt;table&gt;元素定义并包围整个表格。</li>
+<li>表格使用&lt;tr&gt;元素按行定义。</li>
+<li>每行包含一个或多个数据单元格，分别用&lt;td&gt;元素定义。</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[前端基础第十二章]]></title>
+        <id>https://yuuulong.com/post/JvzpggJcc</id>
+        <link href="https://yuuulong.com/post/JvzpggJcc">
+        </link>
+        <updated>2019-12-13T09:30:45.000Z</updated>
+        <summary type="html"><![CDATA[<ul>
+<li>HTML5为HTML增加了很多新元素。</li>
+<li>&lt;section&gt;、&lt;article&gt;、&lt;aside&gt;、&lt;nav&gt;，&lt;header&gt;和&lt;footer&gt;都是帮助你建立页面结构的新元素，与使用&lt;div&gt;相比，它们可以提供更多含义。</li>
+<li>&lt;section&gt;用于对相关的内容进行分组。</li>
+</ul>
+]]></summary>
+        <content type="html"><![CDATA[<ul>
+<li>HTML5为HTML增加了很多新元素。</li>
+<li>&lt;section&gt;、&lt;article&gt;、&lt;aside&gt;、&lt;nav&gt;，&lt;header&gt;和&lt;footer&gt;都是帮助你建立页面结构的新元素，与使用&lt;div&gt;相比，它们可以提供更多含义。</li>
+<li>&lt;section&gt;用于对相关的内容进行分组。</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[前端基础第十一章]]></title>
+        <id>https://yuuulong.com/post/Dfj40tlqJ</id>
+        <link href="https://yuuulong.com/post/Dfj40tlqJ">
+        </link>
+        <updated>2019-12-13T09:29:46.000Z</updated>
+        <summary type="html"><![CDATA[<ul>
+<li>浏览器使用流在页面中放置元素。</li>
+<li>块元素从上向下流，各元素之间有一个换行。默认的，每个块元素会 占浏览器窗口的整个宽度。</li>
+<li>内联元素在块元素内部从左上方流向有下方。如果需要多行，浏览器会换行，在垂直方向上扩展外围块元素，来包含这些内联元素。</li>
+<li>正常页面流中两个块元素上下相邻的外边距会折叠为最大外边距的大小， 或者如果两个外边距大小相同，则会折叠为一个外边距。</li>
+</ul>
+]]></summary>
+        <content type="html"><![CDATA[<ul>
+<li>浏览器使用流在页面中放置元素。</li>
+<li>块元素从上向下流，各元素之间有一个换行。默认的，每个块元素会 占浏览器窗口的整个宽度。</li>
+<li>内联元素在块元素内部从左上方流向有下方。如果需要多行，浏览器会换行，在垂直方向上扩展外围块元素，来包含这些内联元素。</li>
+<li>正常页面流中两个块元素上下相邻的外边距会折叠为最大外边距的大小， 或者如果两个外边距大小相同，则会折叠为一个外边距。</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[前端基础第十章]]></title>
+        <id>https://yuuulong.com/post/UWAkooZzh</id>
+        <link href="https://yuuulong.com/post/UWAkooZzh">
+        </link>
+        <updated>2019-12-13T09:28:44.000Z</updated>
+        <summary type="html"><![CDATA[<ul>
+<li>&lt;div&gt;元素用于将相关的元素归组在一起，放在逻辑区中。</li>
+<li>创建逻辑区有助于标识内容区以及页面的页眉和页脚。</li>
+<li>可以使用&lt;div&gt; 元素将需要共同像是的元素归组子啊一起。</li>
+<li>使用嵌套&lt;div&gt;元素为文件增加更多的结构，这有利于保证结构清晰或者方便增加样式。不过除非确实需要，否则不要过多增加结构。</li>
+</ul>
+]]></summary>
+        <content type="html"><![CDATA[<ul>
+<li>&lt;div&gt;元素用于将相关的元素归组在一起，放在逻辑区中。</li>
+<li>创建逻辑区有助于标识内容区以及页面的页眉和页脚。</li>
+<li>可以使用&lt;div&gt; 元素将需要共同像是的元素归组子啊一起。</li>
+<li>使用嵌套&lt;div&gt;元素为文件增加更多的结构，这有利于保证结构清晰或者方便增加样式。不过除非确实需要，否则不要过多增加结构。</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[前端基础第九章]]></title>
+        <id>https://yuuulong.com/post/5q9YR50by</id>
+        <link href="https://yuuulong.com/post/5q9YR50by">
+        </link>
+        <updated>2019-12-13T09:27:07.000Z</updated>
+        <summary type="html"><![CDATA[<ul>
+<li>CSS使用一个盒模型来控制元素如何显示。</li>
+<li>盒子由内容区和可选的内边距、边框和外边距组成。</li>
+<li>内容区包含元素的内容。</li>
+<li>内边距 用来在内容区周围创建可见的空间。</li>
+<li>边框包围内边距和内容，它提供了从视觉上分离内容的一种手段。</li>
+<li>外边距包围边框、内边距和内容，允许在元素和其他元素之间增加空间。</li>
+<li>内边距、边框和外边距都是可选的。</li>
+</ul>
+]]></summary>
+        <content type="html"><![CDATA[<ul>
+<li>CSS使用一个盒模型来控制元素如何显示。</li>
+<li>盒子由内容区和可选的内边距、边框和外边距组成。</li>
+<li>内容区包含元素的内容。</li>
+<li>内边距 用来在内容区周围创建可见的空间。</li>
+<li>边框包围内边距和内容，它提供了从视觉上分离内容的一种手段。</li>
+<li>外边距包围边框、内边距和内容，允许在元素和其他元素之间增加空间。</li>
+<li>内边距、边框和外边距都是可选的。</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[前端基础第八章]]></title>
+        <id>https://yuuulong.com/post/X_6BmhoVc</id>
+        <link href="https://yuuulong.com/post/X_6BmhoVc">
+        </link>
+        <updated>2019-12-13T09:25:28.000Z</updated>
+        <summary type="html"><![CDATA[<ul>
+<li>CSS提供了很多属性对字体的外观加以控制，包括font-family，font-weight，font-size和font-style。</li>
+<li>font-family是一组有共同特征的字体。</li>
+<li>用于Web的字体系列包括serif，sans-serif，mono space，cursive和fantasy。serif和sans-serif字体最为常用。</li>
+</ul>
+]]></summary>
+        <content type="html"><![CDATA[<ul>
+<li>CSS提供了很多属性对字体的外观加以控制，包括font-family，font-weight，font-size和font-style。</li>
+<li>font-family是一组有共同特征的字体。</li>
+<li>用于Web的字体系列包括serif，sans-serif，mono space，cursive和fantasy。serif和sans-serif字体最为常用。</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[前端基础第七章]]></title>
+        <id>https://yuuulong.com/post/QRPXoJ-Qh</id>
+        <link href="https://yuuulong.com/post/QRPXoJ-Qh">
+        </link>
+        <updated>2019-12-13T09:24:05.000Z</updated>
+        <summary type="html"><![CDATA[<ul>
+<li>CSS包含一些简单语句，称为规则。</li>
+<li>每个规则为选择的一些HTML元素提供样式。</li>
+<li>典型的规则包括一个选择器，以及一个或多个属性和值。</li>
+<li>选择器指定规则将应用到哪些元素。</li>
+<li>每个属性声明以一个分号结束。</li>
+</ul>
+]]></summary>
+        <content type="html"><![CDATA[<ul>
+<li>CSS包含一些简单语句，称为规则。</li>
+<li>每个规则为选择的一些HTML元素提供样式。</li>
+<li>典型的规则包括一个选择器，以及一个或多个属性和值。</li>
+<li>选择器指定规则将应用到哪些元素。</li>
+<li>每个属性声明以一个分号结束。</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[前端基础第六章]]></title>
+        <id>https://yuuulong.com/post/OX0w6iCLn</id>
+        <link href="https://yuuulong.com/post/OX0w6iCLn">
+        </link>
+        <updated>2019-12-13T09:18:20.000Z</updated>
+        <summary type="html"><![CDATA[<ul>
+<li>HTML5是当前的HTML标准。</li>
+<li>万维网协会（World Wide Web Consortium，W3C）是定义HTML标准的标准组织。</li>
+<li>文档类型定义（doctype）用来告诉浏览器你使用的HTML版本。</li>
+<li>HTML标准 现在是一个“活的标准”，这说明这个标准会不断改变，加入新的特性和更新。</li>
+<li>&lt;head&gt;元素中的&lt;meta&gt;标记告诉浏览器关于一个Web页面的额外信息，如果内容类型和字符编码。</li>
+</ul>
+]]></summary>
+        <content type="html"><![CDATA[<ul>
+<li>HTML5是当前的HTML标准。</li>
+<li>万维网协会（World Wide Web Consortium，W3C）是定义HTML标准的标准组织。</li>
+<li>文档类型定义（doctype）用来告诉浏览器你使用的HTML版本。</li>
+<li>HTML标准 现在是一个“活的标准”，这说明这个标准会不断改变，加入新的特性和更新。</li>
+<li>&lt;head&gt;元素中的&lt;meta&gt;标记告诉浏览器关于一个Web页面的额外信息，如果内容类型和字符编码。</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[前端基础第五章]]></title>
+        <id>https://yuuulong.com/post/LiSuri7Me</id>
+        <link href="https://yuuulong.com/post/LiSuri7Me">
+        </link>
+        <updated>2019-12-13T09:10:48.000Z</updated>
+        <summary type="html"><![CDATA[<ul>
+<li>使用&lt;img&gt;元素在Web页面中放置图像。</li>
+<li>浏览器对&lt;img&gt;元素的处理与其他HTML元素稍有不同。读取HTML页面之后，浏览器会从Web服务器获取各个图像并显示。</li>
+<li>如果Web页面上有多个大图像，则可以通过 创建图像的缩略图使你的Web页面更可用，下载也更快，缩略图是一些小图像（大图像的缩小版本），用单击这些缩略图时可以i看到原来的大图像。</li>
+</ul>
+]]></summary>
+        <content type="html"><![CDATA[<ul>
+<li>使用&lt;img&gt;元素在Web页面中放置图像。</li>
+<li>浏览器对&lt;img&gt;元素的处理与其他HTML元素稍有不同。读取HTML页面之后，浏览器会从Web服务器获取各个图像并显示。</li>
+<li>如果Web页面上有多个大图像，则可以通过 创建图像的缩略图使你的Web页面更可用，下载也更快，缩略图是一些小图像（大图像的缩小版本），用单击这些缩略图时可以i看到原来的大图像。</li>
+</ul>
 ]]></content>
     </entry>
 </feed>

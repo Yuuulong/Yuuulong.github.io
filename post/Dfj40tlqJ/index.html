@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>前端基础第十一章 | yuuulong</title>
+<meta name="description" content="&lt;h3&gt;温故而知新&lt;/h3&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yuuulong.com/favicon.ico?v=1576230058162">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://yuuulong.com/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://yuuulong.com">
+        <img class="avatar" src="https://yuuulong.com/images/avatar.png?v=1576230058162" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://yuuulong.com">
+        <h1 class="site-title">yuuulong</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://www.zhihu.com/people/yuuulong" class="menu purple-link">
+            知乎
+          </a>
+        
+      
+        
+          <a href="https://space.bilibili.com/304140057" class="menu purple-link">
+            B站
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://yuuulong.com/post-images/Dfj40tlqJ.jpg')">
+            </div>
+          
+          <h2 class="post-title">前端基础第十一章</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-12-13</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://yuuulong.com/tag/css">
+                    css
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <ul>
+<li>浏览器使用流在页面中放置元素。</li>
+<li>块元素从上向下流，各元素之间有一个换行。默认的，每个块元素会 占浏览器窗口的整个宽度。</li>
+<li>内联元素在块元素内部从左上方流向有下方。如果需要多行，浏览器会换行，在垂直方向上扩展外围块元素，来包含这些内联元素。</li>
+<li>正常页面流中两个块元素上下相邻的外边距会折叠为最大外边距的大小， 或者如果两个外边距大小相同，则会折叠为一个外边距。</li>
+</ul>
+<!-- more -->
+<ul>
+<li>浮动元素会从正常流中取出，浮动到左边或右边。</li>
+<li>浮动元素放在块元素之上，不会影响正常的页面流。不过，内联内容会考虑浮动元素的边界，围绕着这个浮动元素。</li>
+<li>clear属性用来指定一个块元素的左边或右边（或者左右两边）不能有浮动元素。设置了clear属性的块元素会下移，直到它旁边没有块元素。</li>
+<li>浮动元素必须有特定的宽度，不能设置为auto。</li>
+<li>流体布局是指， 扩展浏览器窗口时，页面中的内容会扩展以适应页面。</li>
+<li>冻结布局是指，其中内容的宽度是固定的，不会随着浏览器窗口扩展或收缩。这有一个好处， 可以对设计提供横夺控制，不过也要付出代价，这样就不能有效的使用浏览器宽度了。</li>
+<li>凝胶布局是指，其中内容宽度是固定，但是外边距会随着浏览器窗口扩展或收缩。凝胶布局通常会把内容放在中央。这与冻结布局有同样的好处，不过通常更美观。</li>
+<li>position属性可以设置4个值：static（静态）、absolute（绝对）、fixed（固定）和relative（相对）。</li>
+<li>静态定位的默认的方式，将元素放在页面的正常流中。</li>
+<li>绝对定位允许将元素放在页面上的任何位置。默认地，绝对定位原色会相对于页面边界来放置。</li>
+<li>如果一个绝对定位元素嵌套在另外一个定位元素中，这个元素就会相对于外包含元素定位。</li>
+<li>使用绝对、固定和相对定位时，属性top、right、bottom和left可以指定元素的位置。</li>
+<li>绝对定位元素可以使用z-index属性分层放置，使一个元素在另一个元素上面。z-index值越大，说明它层次越高（在屏幕上离你越近）。</li>
+<li>固定定位元素总是相对于浏览器窗口定位，页面滚动时，固定定位元素不会移动。页面中的其他内容会在这些固定定位元素下面正常的滚动。</li>
+<li>相对定位元素首先正常流入页面， 然后按指定的量偏移，从而留出他们原先所在的空间。</li>
+<li>使用相对定位时，left、right、top和bottom是指距正常流中该元素位置的偏移。</li>
+<li>CSS表格显示允许按一种表格布局来摆放元素。</li>
+<li>要创建CSS表格显示，需要使用对应表格的一个块元素，对应行的块元素，以及对应单元格的块元素。通常，这些块元素都是&lt;div&gt;元素。</li>
+<li>如果需要建立多栏布局，而且内容的均匀的，表格显示是一个很好的布局策略。</li>
+</ul>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://yuuulong.com/post/UWAkooZzh">
+              <h3 class="post-title">
+                下一篇：前端基础第十章
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"><h3>温故而知新</h3></div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/yuuulong/yuuulong.github.io" target="_blank">yuuulong</a> | <a class="rss" href="https://yuuulong.com/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>前端基础第十四章(结） | yuuulong</title>
+<meta name="description" content="&lt;h3&gt;温故而知新&lt;/h3&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yuuulong.com/favicon.ico?v=1576230058162">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://yuuulong.com/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://yuuulong.com">
+        <img class="avatar" src="https://yuuulong.com/images/avatar.png?v=1576230058162" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://yuuulong.com">
+        <h1 class="site-title">yuuulong</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://www.zhihu.com/people/yuuulong" class="menu purple-link">
+            知乎
+          </a>
+        
+      
+        
+          <a href="https://space.bilibili.com/304140057" class="menu purple-link">
+            B站
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://yuuulong.com/post-images/XZzhJK1Pi.jpg')">
+            </div>
+          
+          <h2 class="post-title">前端基础第十四章(结）</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-12-13</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://yuuulong.com/tag/html">
+                    html
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <ul>
+<li>&lt;form&gt;元素定义了表单，所有表单输入元素都有嵌套再这个元素中。</li>
+<li>action属性包含服务器脚本的URL。</li>
+<li>method属性包含发送数据的方法，可以是POST或GET。</li>
+<li>POST打包表单数据，并把它作为请求的一部分发送到服务器。</li>
+<li>GET打包表单数据，并把数据追加到URL。</li>
+</ul>
+<!-- more -->
+<ul>
+<li>如果表单数据应当是私有的，或者表单数据很多，如使用了一个&lt;textarea&gt;或者file &lt;input&gt;元素，就应当使用POST。</li>
+<li>对于可以加书签的请求，要使用GET。</li>
+<li>&lt;input&gt; 元素再Web页面上可以作为多种不同的输入控件，这取决于它的“type”属性值。</li>
+<li>type为“text”时会创建一个单行文本输入框。</li>
+<li>type为“submit”时会创建一个提交按钮。</li>
+<li>type为“radio”时会创建一个单选钮。所有同名的单选钮构成一组互斥的按钮。</li>
+<li>type为“checkbox”时会创建一个复选框控件。通过多个复选框指定相同的名字，可以创建一组选择。</li>
+<li>type为“number”时会创建一个只允许数字字符的单行文本输入控件。</li>
+<li>type为“range”时会创建一个滑动条控件提供数字输入。</li>
+<li>&quot;color&quot;类型会在支持这个类型的浏览器中创建一个颜色选择器（否则只会创建一个普通的文本输入）。</li>
+<li>“date”类型会在支持 这个类型的浏览器中创建一个日期选择器（否则只会创建一个普通的文本输入控件）。</li>
+<li>“email”、“url”和“tel”类型会创建单行文本输入， 在一些移动浏览器上会出现定制键盘来方便数据输入。</li>
+<li>&lt;textarea&gt;元素会创建一个多行文本输入区。</li>
+<li>&lt;select&gt;元素会创建一个菜单，包含一个或多个&lt;option&gt;元素。&lt;option&gt;元素定义了菜单中的菜单项。</li>
+<li>如果将文本放在&lt;textarea&gt;元素的内容中，这会成为Web页面上文本区控件中的默认文本。</li>
+<li>text &lt;input&gt;元素中的value属性可以用来为单行文本输入控件提供一个初始值。</li>
+<li>在提交按钮上设置value属性可以改变按钮上显示的文本。</li>
+<li>提交一个Web表单时，表单数据 值与响应的数据名配对， 所有名和值会发送到服务器。</li>
+<li>由于表单有一个表格结构， 通常会用CSS表格显示来建立表单布局。 CSS还可以用来指定表单的颜色、字体风格、边框等样式。</li>
+<li>HTML允许用&lt;fieldset&gt;元素组织表单元素。</li>
+<li>可以用&lt;label&gt;元素以一种有助于提高可访问性的方式关联标签与表单元素。</li>
+<li>使用placeholder属性可以为表单用户提供一个提示，指出你希望在一个输入域中输入什么内容。</li>
+<li>required属性指示一个输入域是必要的，要让表单成功提交，这个输入域中必须有值。有些浏览器在你提交表单 之前会强制要求在这些域中输入数据。</li>
+</ul>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://yuuulong.com/post/jYC4kZDMg">
+              <h3 class="post-title">
+                下一篇：前端基础第十三章
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"><h3>温故而知新</h3></div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/yuuulong/yuuulong.github.io" target="_blank">yuuulong</a> | <a class="rss" href="https://yuuulong.com/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

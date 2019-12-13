@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>前端基础第五章 | yuuulong</title>
+<meta name="description" content="&lt;h3&gt;温故而知新&lt;/h3&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yuuulong.com/favicon.ico?v=1576230058162">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://yuuulong.com/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://yuuulong.com">
+        <img class="avatar" src="https://yuuulong.com/images/avatar.png?v=1576230058162" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://yuuulong.com">
+        <h1 class="site-title">yuuulong</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://www.zhihu.com/people/yuuulong" class="menu purple-link">
+            知乎
+          </a>
+        
+      
+        
+          <a href="https://space.bilibili.com/304140057" class="menu purple-link">
+            B站
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://yuuulong.com/post-images/LiSuri7Me.jpg')">
+            </div>
+          
+          <h2 class="post-title">前端基础第五章</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-12-13</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://yuuulong.com/tag/html">
+                    html
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <ul>
+<li>使用&lt;img&gt;元素在Web页面中放置图像。</li>
+<li>浏览器对&lt;img&gt;元素的处理与其他HTML元素稍有不同。读取HTML页面之后，浏览器会从Web服务器获取各个图像并显示。</li>
+<li>如果Web页面上有多个大图像，则可以通过 创建图像的缩略图使你的Web页面更可用，下载也更快，缩略图是一些小图像（大图像的缩小版本），用单击这些缩略图时可以i看到原来的大图像。</li>
+</ul>
+<!-- more -->
+<ul>
+<li>&lt;img&gt;元素是一个内联元素，这说明浏览器不会在图像前后插入 一个换行。</li>
+<li>要利用src属性指定图像文件的位置，可以在src属性在红使用相对路径包含你自己的网站中的图像， 或者可以使用URL包含其他网站的图像。</li>
+<li>&lt;img&gt;元素的alt属性的对图像的一个有意义的描述，在一些浏览器中，如果无法找到图像，就会显示这个描述，另外屏幕阅读器会使用这个属性为有视力障碍的人描述图像。</li>
+<li>图像宽度要小于800像素，这是Web页面中关于照片大小的一个好经验。数码相机拍摄的大多数照片都太大，不能很好的放在Web页面中，所以需要调整他们的大小。</li>
+<li>有很多照片编辑应用，Photoshop Elementsis就是其中之一，可以用来调整图像的大小。还可以使用很多免费的联机工具调整图像大小。可以在网上搜索“free  online image editor”（免费联机图像编辑器）。</li>
+<li>对于浏览器来说太大的图像会使Web页面很难使用，而且下载和显示都很慢。</li>
+<li>JPEG、PNG和GIF是Web浏览器广泛支持的3种图像格式。</li>
+<li>JPEG格式最适合保存照片和其他复杂图像。</li>
+<li>GIF或PNG格式最适合保存logo和其他包含单色、线条或文本的简单图形。</li>
+<li>JPEG图像可以按不同质量压缩，所以可以很好地权衡图像质量和文件大小，来满足你的需要。</li>
+<li>GIF和PNG图像格式允许建立一个有透明背景的图像。如果把一个有透明背景的图像放在一个Web页面中，图像后面的东西（如页面的背景色）就会透过图像的透明部分显示出来。</li>
+<li>GIF和PNG的无损格式，这说明相比于JPEG文件，这些格式的文件往往更大。</li>
+<li>PNG可以提供比GIF更好的透明度控制，而且不像GIF只支持256种颜色，PNG可以支持更多颜色。</li>
+<li>PNG有3种不同大小选择：PNG-24（支持数百万种颜色)、PNG16（支持数千种颜色），以及PNG-8（支持256种颜色），可以根据需要来选择。</li>
+<li>在Photoshop Elements种，使用“Save for Web”（保存为Web格式）对话框种的Matte（蒙版）颜色菜单来选择合适的颜色，柔化PNG或GIF图像的边缘。</li>
+<li>图像可以用作指向其他Web页面的链接。要由图像创建一个链接，可以使用&lt;img&gt;元素作为&lt;a&gt;元素的内容，将链接放在&lt;a&gt;元素的href属性中。</li>
+</ul>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://yuuulong.com/post/_6pHQ_HhP">
+              <h3 class="post-title">
+                下一篇：前端基础第四章
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"><h3>温故而知新</h3></div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/yuuulong/yuuulong.github.io" target="_blank">yuuulong</a> | <a class="rss" href="https://yuuulong.com/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

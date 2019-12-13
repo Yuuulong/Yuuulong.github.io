@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>前端基础第八章 | yuuulong</title>
+<meta name="description" content="&lt;h3&gt;温故而知新&lt;/h3&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yuuulong.com/favicon.ico?v=1576230058162">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://yuuulong.com/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://yuuulong.com">
+        <img class="avatar" src="https://yuuulong.com/images/avatar.png?v=1576230058162" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://yuuulong.com">
+        <h1 class="site-title">yuuulong</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://www.zhihu.com/people/yuuulong" class="menu purple-link">
+            知乎
+          </a>
+        
+      
+        
+          <a href="https://space.bilibili.com/304140057" class="menu purple-link">
+            B站
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://yuuulong.com/post-images/X_6BmhoVc.jpg')">
+            </div>
+          
+          <h2 class="post-title">前端基础第八章</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-12-13</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://yuuulong.com/tag/css">
+                    css
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <ul>
+<li>CSS提供了很多属性对字体的外观加以控制，包括font-family，font-weight，font-size和font-style。</li>
+<li>font-family是一组有共同特征的字体。</li>
+<li>用于Web的字体系列包括serif，sans-serif，mono space，cursive和fantasy。serif和sans-serif字体最为常用。</li>
+</ul>
+<!-- more -->
+<ul>
+<li>访问者在你的Web页面上看到的字体取决于他们自己计算机上安装了哪些字体，除非你使用了Web字体。</li>
+<li>在font-family CSS属性中指定候选字体是一个好主意，以防用户没有安装你的首选字体。</li>
+<li>组后一个字体要指定为一个通用字体，如serif或sans-serif，这样依赖，如果找不到其他字体，浏览器可以替换适当的字体。</li>
+<li>如果你要使用某种字体，而默认情况下用户可能没有安装这种字体，可以在CSS中使用@font-face规则。</li>
+<li>字体大小通常使用像素、em、百分数或关键字指定。</li>
+<li>如果使用像素 （“px”）来指定字体大小，就是在告诉浏览器字母高度是多少像素。</li>
+<li>em和%是相对字体大小，所以使用em和%指定字体大小时，就意味着字体大小要相对于其父元素的字体大小指定。</li>
+<li>使用相对字体大小可以让你的页面更可维护。</li>
+<li>在body规则中使用字体大小关键字来设置基本字体大小，这样如果用户希望文本更大或更小，所有浏览器就能按比例缩放字体大小。</li>
+<li>可以使用font-weightCSS属性设置文本为粗体。</li>
+<li>font-style属性用于创建斜体或倾斜文本。斜体或倾斜文本是倾斜的。</li>
+<li>Web颜色是混合不同数量的红、绿、蓝色得到的。</li>
+<li>如果混合红色100%和蓝色100%，可以得到白色。</li>
+<li>如果混合红色0%，绿色0%和蓝色0%，可以得到黑色。</li>
+<li>CSS有16个基本颜色，包括黑色、白色、红色、蓝色、和绿色，以及150种扩展色。</li>
+<li>可以使用红、绿、蓝百分数指定你想要的颜色，也可以使用红、绿、蓝数值（0-255）指定，或者这使用颜色的十六进制码来指定颜色。</li>
+<li>想找到你想要的一个颜色的十六进制码，有一种很容易的方法，可以使用一个照片编辑应用的颜色选择工具，后者某个在线Web工具，这样的工具有很多。</li>
+<li>表示颜色的十六进制码有6位，每一位取值位0-F。前两位表示红色数量，接下来两位表示绿色数量，最后两位表示蓝色数量。</li>
+<li>可以使用text-decoration属性为文本创建一个下划线。有下划线的文档通常会被用户误以为是链接文本，所以要谨慎使用这个属性。</li>
+</ul>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://yuuulong.com/post/QRPXoJ-Qh">
+              <h3 class="post-title">
+                下一篇：前端基础第七章
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"><h3>温故而知新</h3></div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/yuuulong/yuuulong.github.io" target="_blank">yuuulong</a> | <a class="rss" href="https://yuuulong.com/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
