@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>http://yuuulong.com</id>
     <title>yuuulong</title>
-    <updated>2019-12-13T04:54:12.931Z</updated>
+    <updated>2019-12-13T05:27:29.220Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="http://yuuulong.com"/>
+    <link rel="self" href="http://yuuulong.com/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>http://yuuulong.com/images/avatar.png</logo>
+    <icon>http://yuuulong.com/favicon.ico</icon>
     <rights>All rights reserved 2019, yuuulong</rights>
     <entry>
         <title type="html"><![CDATA[hello]]></title>
-        <id>http://localhost:4000/post/e_y26oAqz</id>
-        <link href="http://localhost:4000/post/e_y26oAqz">
+        <id>http://yuuulong.com/post/e_y26oAqz</id>
+        <link href="http://yuuulong.com/post/e_y26oAqz">
         </link>
         <updated>2019-12-13T04:04:36.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
@@ -25,8 +25,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[hello]]></title>
-        <id>http://localhost:4000/post/kbw-uqSgW</id>
-        <link href="http://localhost:4000/post/kbw-uqSgW">
+        <id>http://yuuulong.com/post/kbw-uqSgW</id>
+        <link href="http://yuuulong.com/post/kbw-uqSgW">
         </link>
         <updated>2019-12-13T04:04:11.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
