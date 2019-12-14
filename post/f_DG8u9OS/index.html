@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>CSS 定位详解 | yuuulong</title>
+<meta name="description" content="&lt;h3&gt;温故而知新&lt;/h3&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yuuulong.com/favicon.ico?v=1576246246509">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://yuuulong.com/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://yuuulong.com">
+        <img class="avatar" src="https://yuuulong.com/images/avatar.png?v=1576246246509" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://yuuulong.com">
+        <h1 class="site-title">yuuulong</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://www.zhihu.com/people/yuuulong" class="menu purple-link">
+            知乎
+          </a>
+        
+      
+        
+          <a href="https://space.bilibili.com/304140057" class="menu purple-link">
+            B站
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://yuuulong.com/post-images/f_DG8u9OS.jpg')">
+            </div>
+          
+          <h2 class="post-title">CSS 定位详解</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-12-13</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://yuuulong.com/tag/css">
+                    css
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>CSS 有两个最重要的基本属性，前端开发必须掌握：display 和 position。<br>
+display属性指定网页的布局。两个重要的布局，我已经介绍过了：弹性布局flex和网格布局grid。</p>
+<!-- more -->
+<p>本文介绍非常有用的position属性。我希望通过10分钟的阅读，帮助大家轻松掌握网页定位，说清楚浏览器如何计算网页元素的位置，尤其是新引进的sticky定位。</p>
+<h3 id="一-position-属性的作用">一、position 属性的作用</h3>
+<p>position属性用来指定一个元素在网页上的位置，一共有5种定位方式，即position属性主要有五个值。</p>
+<pre><code>static
+relative
+fixed
+absolute
+sticky
+</code></pre>
+<p>下面就依次介绍这五个值。最后一个sticky是2017年浏览器才支持的，本文将重点介绍。</p>
+<h3 id="二-static-属性值">二、static 属性值</h3>
+<p>static是position属性的默认值。如果省略position属性，浏览器就认为该元素是static定位。<br>
+这时，浏览器会按照源码的顺序，决定每个元素的位置，这称为&quot;正常的页面流&quot;（normal flow）。每个块级元素占据自己的区块（block），元素与元素之间不产生重叠，这个位置就是元素的默认位置。<br>
+<img src="https://yuuulong.com/post-images/1576240727095.jpg" alt=""><br>
+注意，static定位所导致的元素位置，是浏览器自主决定的，所以这时top、bottom、left、right这四个属性无效。</p>
+<h3 id="三-relativeabsolutefixed">三、relative，absolute，fixed</h3>
+<p>relative、absolute、fixed这三个属性值有一个共同点，都是相对于某个基点的定位，不同之处仅仅在于基点不同。所以，只要理解了它们的基点是什么，就很容易掌握这三个属性值。<br>
+这三种定位都不会对其他元素的位置产生影响，因此元素之间可能产生重叠。</p>
+<h4 id="31-relative-属性值">3.1 relative 属性值</h4>
+<p>relative表示，相对于默认位置（即static时的位置）进行偏移，即定位基点是元素的默认位置。<br>
+<img src="https://yuuulong.com/post-images/1576240896737.jpg" alt=""><br>
+<img src="https://yuuulong.com/post-images/1576240905258.jpg" alt=""><br>
+它必须搭配top、bottom、left、right这四个属性一起使用，用来指定偏移的方向和距离。<br>
+<img src="https://yuuulong.com/post-images/1576242809981.jpg" alt=""></p>
+<pre><code>div {
+  position: relative;
+  top: 20px;
+}
+</code></pre>
+<p>上面代码中，div元素从默认位置向下偏移20px（即距离顶部20px）。</p>
+<h4 id="32-absolute-属性值">3.2 absolute 属性值</h4>
+<p>absolute表示，相对于上级元素（一般是父元素）进行偏移，即定位基点是父元素。<br>
+它有一个重要的限制条件：定位基点（一般是父元素）不能是static定位，否则定位基点就会变成整个网页的根元素html。另外，absolute定位也必须搭配top、bottom、left、right这四个属性一起使用。<br>
+<img src="https://yuuulong.com/post-images/1576242871776.jpg" alt=""></p>
+<pre><code>/*
+  HTML 代码如下
+  &lt;div id=&quot;father&quot;&gt;
+    &lt;div id=&quot;son&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+*/
+
+#father {
+  positon: relative;
+}
+#son {
+  position: absolute;
+  top: 20px;
+}
+</code></pre>
+<p>上面代码中，父元素是relative定位，子元素是absolute定位，所以子元素的定位基点是父元素，相对于父元素的顶部向下偏移20px。如果父元素是static定位，上例的子元素就是距离网页的顶部向下偏移20px。<br>
+注意，absolute定位的元素会被&quot;正常页面流&quot;忽略，即在&quot;正常页面流&quot;中，该元素所占空间为零，周边元素不受影响。</p>
+<h4 id="33-fixed-属性值">3.3 fixed 属性值</h4>
+<p>fixed表示，相对于视口（viewport，浏览器窗口）进行偏移，即定位基点是浏览器窗口。这会导致元素的位置不随页面滚动而变化，好像固定在网页上一样。<br>
+<img src="https://yuuulong.com/post-images/1576242931755.jpg" alt=""><br>
+它如果搭配top、bottom、left、right这四个属性一起使用，表示元素的初始位置是基于视口计算的，否则初始位置就是元素的默认位置。</p>
+<pre><code>div {
+  position: fixed;
+  top: 0;
+}
+</code></pre>
+<p>上面代码中，div元素始终在视口顶部，不随网页滚动而变化。</p>
+<h3 id="四-sticky-属性值">四、sticky 属性值</h3>
+<p>sticky跟前面四个属性值都不一样，它会产生动态效果，很像relative和fixed的结合：一些时候是relative定位（定位基点是自身默认位置），另一些时候自动变成fixed定位（定位基点是视口）。<br>
+因此，它能够形成&quot;动态固定&quot;的效果。比如，网页的搜索工具栏，初始加载时在自己的默认位置（relative定位）。<br>
+<img src="https://yuuulong.com/post-images/1576243005282.jpg" alt=""><br>
+页面向下滚动时，工具栏变成固定位置，始终停留在页面头部（fixed定位）。<br>
+<img src="https://yuuulong.com/post-images/1576243031537.jpg" alt=""><br>
+等到页面重新向上滚动回到原位，工具栏也会回到默认位置。<br>
+sticky生效的前提是，必须搭配top、bottom、left、right这四个属性一起使用，不能省略，否则等同于relative定位，不产生&quot;动态固定&quot;的效果。原因是这四个属性用来定义&quot;偏移距离&quot;，浏览器把它当作sticky的生效门槛。<br>
+它的具体规则是，当页面滚动，父元素开始脱离视口时（即部分不可见），只要与sticky元素的距离达到生效门槛，relative定位自动切换为fixed定位；等到父元素完全脱离视口时（即完全不可见），fixed定位自动切换回relative定位。<br>
+请看下面的示例代码。（注意，除了已被淘汰的 IE 以外，其他浏览器目前都支持sticky。但是，Safari 浏览器需要加上浏览器前缀-webkit-。）</p>
+<pre><code>#toolbar {
+  position: -webkit-sticky; /* safari 浏览器 */
+  position: sticky; /* 其他浏览器 */
+  top: 20px;
+}
+</code></pre>
+<p>上面代码中，页面向下滚动时，#toolbar的父元素开始脱离视口，一旦视口的顶部与#toolbar的距离小于20px（门槛值），#toolbar就自动变为fixed定位，保持与视口顶部20px的距离。页面继续向下滚动，父元素彻底离开视口（即整个父元素完全不可见），#toolbar恢复成relative定位。</p>
+<p>---摘录自<a href="http://www.ruanyifeng.com/blog/2019/11/css-position.html">阮一峰CSS定位详解</a></p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://yuuulong.com/post/VqvQjItcU">
+              <h3 class="post-title">
+                下一篇：xxx.github.io挂载域名
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"><h3>温故而知新</h3></div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/yuuulong/yuuulong.github.io" target="_blank">yuuulong</a> | <a class="rss" href="https://yuuulong.com/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
