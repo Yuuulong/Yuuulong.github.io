@@ -1,0 +1,570 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>Flex布局：实战篇 | yuuulong</title>
+<meta name="description" content="&lt;h3&gt;温故而知新&lt;/h3&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yuuulong.com/favicon.ico?v=1576387668721">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://yuuulong.com/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://yuuulong.com">
+        <img class="avatar" src="https://yuuulong.com/images/avatar.png?v=1576387668721" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://yuuulong.com">
+        <h1 class="site-title">yuuulong</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://www.zhihu.com/people/yuuulong" class="menu purple-link">
+            知乎
+          </a>
+        
+      
+        
+          <a href="https://space.bilibili.com/304140057" class="menu purple-link">
+            B站
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://yuuulong.com/post-images/Q0OK17NcS.png')">
+            </div>
+          
+          <h2 class="post-title">Flex布局：实战篇</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-12-15</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://yuuulong.com/tag/css">
+                    css
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <h3 id="一-骰子的布局">一、骰子的布局</h3>
+<p>骰子的一面，最多可以放置9个点。</p>
+<!-- more -->
+<p><img src="https://yuuulong.com/post-images/1576386160860.png" alt="">如果不加说明，本节的HTML模板一律如下。</p>
+<pre><code>&lt;div class=&quot;box&quot;&gt;
+  &lt;span class=&quot;item&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+<p><strong>1.1 单项目</strong><br>
+首先，只有左上角1个点的情况。Flex布局默认就是首行左对齐，所以一行代码就够了。<img src="https://yuuulong.com/post-images/1576386202959.png" alt=""></p>
+<pre><code>.box {
+  display: flex;
+}
+</code></pre>
+<p>设置项目的对齐方式，就能实现居中对齐和右对齐。<img src="https://yuuulong.com/post-images/1576386231878.png" alt=""></p>
+<pre><code>.box {
+  display: flex;
+  justify-content: center;
+}
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://yuuulong.com/post-images/1576386259268.png" alt=""></figure>
+<pre><code>.box {
+  display: flex;
+  justify-content: flex-end;
+}
+</code></pre>
+<p>设置交叉轴对齐方式，可以垂直移动主轴。<br>
+<img src="https://yuuulong.com/post-images/1576386276757.png" alt=""></p>
+<pre><code>.box {
+  display: flex;
+  align-items: center;
+}
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://yuuulong.com/post-images/1576386289110.png" alt=""></figure>
+<pre><code>.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="https://yuuulong.com/post-images/1576386303930.png" alt=""></figure>
+<pre><code>.box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+</code></pre>
+<figure data-type="image" tabindex="4"><img src="https://yuuulong.com/post-images/1576386317305.png" alt=""></figure>
+<pre><code>.box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+</code></pre>
+<p><strong>1.2 双项目</strong><br>
+<img src="https://yuuulong.com/post-images/1576386338597.png" alt=""></p>
+<pre><code>.box {
+  display: flex;
+  justify-content: space-between;
+}
+</code></pre>
+<figure data-type="image" tabindex="5"><img src="https://yuuulong.com/post-images/1576386351594.png" alt=""></figure>
+<pre><code>.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+</code></pre>
+<figure data-type="image" tabindex="6"><img src="https://yuuulong.com/post-images/1576386364599.png" alt=""></figure>
+<pre><code>.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+</code></pre>
+<figure data-type="image" tabindex="7"><img src="https://yuuulong.com/post-images/1576386376999.png" alt=""></figure>
+<pre><code>.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+</code></pre>
+<figure data-type="image" tabindex="8"><img src="https://yuuulong.com/post-images/1576386391177.png" alt=""></figure>
+<pre><code>.box {
+  display: flex;
+}
+
+.item:nth-child(2) {
+  align-self: center;
+}
+</code></pre>
+<figure data-type="image" tabindex="9"><img src="https://yuuulong.com/post-images/1576386417981.png" alt=""></figure>
+<pre><code>.box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item:nth-child(2) {
+  align-self: flex-end;
+}
+</code></pre>
+<p><strong>1.3 三项目</strong><br>
+<img src="https://yuuulong.com/post-images/1576386437613.png" alt=""></p>
+<pre><code>.box {
+  display: flex;
+}
+
+.item:nth-child(2) {
+  align-self: center;
+}
+
+.item:nth-child(3) {
+  align-self: flex-end;
+}
+</code></pre>
+<p><strong>1.4 四项目</strong><br>
+<img src="https://yuuulong.com/post-images/1576386454696.png" alt=""></p>
+<pre><code>.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: space-between;
+}
+</code></pre>
+<p><img src="https://yuuulong.com/post-images/1576386468654.png" alt=""><br>
+HTML代码如下。</p>
+<pre><code>&lt;div class=&quot;box&quot;&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;span class=&quot;item&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;item&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;span class=&quot;item&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;item&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>CSS代码如下。</p>
+<pre><code>.box {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.column {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+</code></pre>
+<p><strong>1.5 六项目</strong><br>
+<img src="https://yuuulong.com/post-images/1576386500886.png" alt=""></p>
+<pre><code>.box {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+</code></pre>
+<figure data-type="image" tabindex="10"><img src="https://yuuulong.com/post-images/1576386512796.png" alt=""></figure>
+<pre><code>.box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+</code></pre>
+<p><img src="https://yuuulong.com/post-images/1576386529936.png" alt=""><br>
+HTML代码如下。</p>
+<pre><code>&lt;div class=&quot;box&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;span class=&quot;item&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;item&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;item&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;span class=&quot;item&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+     &lt;span class=&quot;item&quot;&gt;&lt;/span&gt;
+     &lt;span class=&quot;item&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>CSS代码如下。</p>
+<pre><code>.box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row{
+  flex-basis: 100%;
+  display:flex;
+}
+
+.row:nth-child(2){
+  justify-content: center;
+}
+
+.row:nth-child(3){
+  justify-content: space-between;
+}
+</code></pre>
+<p><strong>1.6 九项目</strong><br>
+<img src="https://yuuulong.com/post-images/1576386546575.png" alt=""></p>
+<pre><code>.box {
+  display: flex;
+  flex-wrap: wrap;
+}
+</code></pre>
+<h3 id="二-网格布局">二、网格布局</h3>
+<p><strong>2.1 基本网格布局</strong><br>
+最简单的网格布局，就是平均分布。在容器里面平均分配空间，跟上面的骰子布局很像，但是需要设置项目的自动缩放。<br>
+<img src="https://yuuulong.com/post-images/1576386562174.png" alt=""><br>
+HTML代码如下。</p>
+<pre><code>&lt;div class=&quot;Grid&quot;&gt;
+  &lt;div class=&quot;Grid-cell&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;Grid-cell&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;Grid-cell&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>CSS代码如下。</p>
+<pre><code>.Grid {
+  display: flex;
+}
+
+.Grid-cell {
+  flex: 1;
+}
+</code></pre>
+<p><strong>2.2 百分比布局</strong><br>
+某个网格的宽度为固定的百分比，其余网格平均分配剩余的空间。<br>
+<img src="https://yuuulong.com/post-images/1576386582792.png" alt=""><br>
+HTML代码如下。</p>
+<pre><code>&lt;div class=&quot;Grid&quot;&gt;
+  &lt;div class=&quot;Grid-cell u-1of4&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;Grid-cell&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;Grid-cell u-1of3&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code>.Grid {
+  display: flex;
+}
+
+.Grid-cell {
+  flex: 1;
+}
+
+.Grid-cell.u-full {
+  flex: 0 0 100%;
+}
+
+.Grid-cell.u-1of2 {
+  flex: 0 0 50%;
+}
+
+.Grid-cell.u-1of3 {
+  flex: 0 0 33.3333%;
+}
+
+.Grid-cell.u-1of4 {
+  flex: 0 0 25%;
+}
+</code></pre>
+<h3 id="三-圣杯布局">三、圣杯布局</h3>
+<p>圣杯布局（Holy Grail Layout）指的是一种最常见的网站布局。页面从上到下，分成三个部分：头部（header），躯干（body），尾部（footer）。其中躯干又水平分成三栏，从左到右为：导航、主栏、副栏。<br>
+<img src="https://yuuulong.com/post-images/1576386599921.png" alt=""><br>
+HTML代码如下。</p>
+<pre><code>&lt;body class=&quot;HolyGrail&quot;&gt;
+  &lt;header&gt;...&lt;/header&gt;
+  &lt;div class=&quot;HolyGrail-body&quot;&gt;
+    &lt;main class=&quot;HolyGrail-content&quot;&gt;...&lt;/main&gt;
+    &lt;nav class=&quot;HolyGrail-nav&quot;&gt;...&lt;/nav&gt;
+    &lt;aside class=&quot;HolyGrail-ads&quot;&gt;...&lt;/aside&gt;
+  &lt;/div&gt;
+  &lt;footer&gt;...&lt;/footer&gt;
+&lt;/body&gt;
+</code></pre>
+<p>CSS代码如下。</p>
+<pre><code>.HolyGrail {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header,
+footer {
+  flex: 1;
+}
+
+.HolyGrail-body {
+  display: flex;
+  flex: 1;
+}
+
+.HolyGrail-content {
+  flex: 1;
+}
+
+.HolyGrail-nav, .HolyGrail-ads {
+  /* 两个边栏的宽度设为12em */
+  flex: 0 0 12em;
+}
+
+.HolyGrail-nav {
+  /* 导航放到最左边 */
+  order: -1;
+}
+</code></pre>
+<p>如果是小屏幕，躯干的三栏自动变为垂直叠加。</p>
+<pre><code>@media (max-width: 768px) {
+  .HolyGrail-body {
+    flex-direction: column;
+    flex: 1;
+  }
+  .HolyGrail-nav,
+  .HolyGrail-ads,
+  .HolyGrail-content {
+    flex: auto;
+  }
+}
+</code></pre>
+<h3 id="四-输入框的布局">四、输入框的布局</h3>
+<p>我们常常需要在输入框的前方添加提示，后方添加按钮。<br>
+<img src="https://yuuulong.com/post-images/1576386632186.png" alt=""><br>
+HTML代码如下。</p>
+<pre><code>&lt;div class=&quot;InputAddOn&quot;&gt;
+  &lt;span class=&quot;InputAddOn-item&quot;&gt;...&lt;/span&gt;
+  &lt;input class=&quot;InputAddOn-field&quot;&gt;
+  &lt;button class=&quot;InputAddOn-item&quot;&gt;...&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<p>CSS代码如下。</p>
+<pre><code>.InputAddOn {
+  display: flex;
+}
+
+.InputAddOn-field {
+  flex: 1;
+}
+</code></pre>
+<h3 id="五-悬挂式布局">五、悬挂式布局</h3>
+<p>有时，主栏的左侧或右侧，需要添加一个图片栏。<br>
+<img src="https://yuuulong.com/post-images/1576386655248.png" alt=""><br>
+HTML代码如下。</p>
+<pre><code>&lt;div class=&quot;Media&quot;&gt;
+  &lt;img class=&quot;Media-figure&quot; src=&quot;&quot; alt=&quot;&quot;&gt;
+  &lt;p class=&quot;Media-body&quot;&gt;...&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>CSS代码如下。</p>
+<pre><code>.Media {
+  display: flex;
+  align-items: flex-start;
+}
+
+.Media-figure {
+  margin-right: 1em;
+}
+
+.Media-body {
+  flex: 1;
+}
+</code></pre>
+<h3 id="六-固定的底栏">六、固定的底栏</h3>
+<p>有时，页面内容太少，无法占满一屏的高度，底栏就会抬高到页面的中间。这时可以采用Flex布局，让底栏总是出现在页面的底部。<br>
+<img src="https://yuuulong.com/post-images/1576386670710.png" alt=""><br>
+HTML代码如下。</p>
+<pre><code>&lt;body class=&quot;Site&quot;&gt;
+  &lt;header&gt;...&lt;/header&gt;
+  &lt;main class=&quot;Site-content&quot;&gt;...&lt;/main&gt;
+  &lt;footer&gt;...&lt;/footer&gt;
+&lt;/body&gt;
+</code></pre>
+<p>CSS代码如下。</p>
+<pre><code>.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+</code></pre>
+<h3 id="七流式布局">七，流式布局</h3>
+<p>每行的项目数固定，会自动分行。<img src="https://yuuulong.com/post-images/1576386684333.png" alt=""><br>
+CSS的写法。</p>
+<pre><code>.parent {
+  width: 200px;
+  height: 150px;
+  background-color: black;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+
+.child {
+  box-sizing: border-box;
+  background-color: white;
+  flex: 0 0 25%;
+  height: 50px;
+  border: 1px solid red;
+}
+</code></pre>
+<p>（完）<br>
+摘自<a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html">阮一峰flex布局：实战</a></p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://yuuulong.com/post/cBoDckb7i">
+              <h3 class="post-title">
+                下一篇：Flex 布局教程：语法篇
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan"><h3>温故而知新</h3></div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/yuuulong/yuuulong.github.io" target="_blank">yuuulong</a> | <a class="rss" href="https://yuuulong.com/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

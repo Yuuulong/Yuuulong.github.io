@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yuuulong.com</id>
     <title>yuuulong</title>
-    <updated>2019-12-14T12:34:59.037Z</updated>
+    <updated>2019-12-15T05:27:54.019Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yuuulong.com"/>
     <link rel="self" href="https://yuuulong.com/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://yuuulong.com/images/avatar.png</logo>
     <icon>https://yuuulong.com/favicon.ico</icon>
     <rights>All rights reserved 2019, yuuulong</rights>
+    <entry>
+        <title type="html"><![CDATA[Flex布局：实战篇]]></title>
+        <id>https://yuuulong.com/post/Q0OK17NcS</id>
+        <link href="https://yuuulong.com/post/Q0OK17NcS">
+        </link>
+        <updated>2019-12-15T01:59:27.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="一-骰子的布局">一、骰子的布局</h3>
+<p>骰子的一面，最多可以放置9个点。</p>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="一-骰子的布局">一、骰子的布局</h3>
+<p>骰子的一面，最多可以放置9个点。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Flex 布局教程：语法篇]]></title>
         <id>https://yuuulong.com/post/cBoDckb7i</id>
@@ -178,33 +191,6 @@ display属性指定网页的布局。两个重要的布局，我已经介绍过�
 <li>创建逻辑区有助于标识内容区以及页面的页眉和页脚。</li>
 <li>可以使用&lt;div&gt; 元素将需要共同像是的元素归组子啊一起。</li>
 <li>使用嵌套&lt;div&gt;元素为文件增加更多的结构，这有利于保证结构清晰或者方便增加样式。不过除非确实需要，否则不要过多增加结构。</li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[前端基础第九章]]></title>
-        <id>https://yuuulong.com/post/5q9YR50by</id>
-        <link href="https://yuuulong.com/post/5q9YR50by">
-        </link>
-        <updated>2019-12-13T09:27:07.000Z</updated>
-        <summary type="html"><![CDATA[<ul>
-<li>CSS使用一个盒模型来控制元素如何显示。</li>
-<li>盒子由内容区和可选的内边距、边框和外边距组成。</li>
-<li>内容区包含元素的内容。</li>
-<li>内边距 用来在内容区周围创建可见的空间。</li>
-<li>边框包围内边距和内容，它提供了从视觉上分离内容的一种手段。</li>
-<li>外边距包围边框、内边距和内容，允许在元素和其他元素之间增加空间。</li>
-<li>内边距、边框和外边距都是可选的。</li>
-</ul>
-]]></summary>
-        <content type="html"><![CDATA[<ul>
-<li>CSS使用一个盒模型来控制元素如何显示。</li>
-<li>盒子由内容区和可选的内边距、边框和外边距组成。</li>
-<li>内容区包含元素的内容。</li>
-<li>内边距 用来在内容区周围创建可见的空间。</li>
-<li>边框包围内边距和内容，它提供了从视觉上分离内容的一种手段。</li>
-<li>外边距包围边框、内边距和内容，允许在元素和其他元素之间增加空间。</li>
-<li>内边距、边框和外边距都是可选的。</li>
 </ul>
 ]]></content>
     </entry>
