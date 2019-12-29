@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yuuulong.com</id>
     <title>yuuulong</title>
-    <updated>2019-12-29T14:50:25.195Z</updated>
+    <updated>2019-12-29T15:00:31.275Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yuuulong.com"/>
     <link rel="self" href="https://yuuulong.com/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://yuuulong.com/images/avatar.png</logo>
     <icon>https://yuuulong.com/favicon.ico</icon>
     <rights>All rights reserved 2019, yuuulong</rights>
+    <entry>
+        <title type="html"><![CDATA[为什么医生总是让你做各种检查？]]></title>
+        <id>https://yuuulong.com/post/dqdM_Fm_q</id>
+        <link href="https://yuuulong.com/post/dqdM_Fm_q">
+        </link>
+        <updated>2019-12-29T14:54:12.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[为什么有些专家的判断是狗屎？]]></title>
         <id>https://yuuulong.com/post/sPeWKpK0D</id>
@@ -152,25 +159,6 @@ display属性指定网页的布局。两个重要的布局，我已经介绍过�
 <li>&lt;table&gt;元素定义并包围整个表格。</li>
 <li>表格使用&lt;tr&gt;元素按行定义。</li>
 <li>每行包含一个或多个数据单元格，分别用&lt;td&gt;元素定义。</li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[前端基础第十二章]]></title>
-        <id>https://yuuulong.com/post/JvzpggJcc</id>
-        <link href="https://yuuulong.com/post/JvzpggJcc">
-        </link>
-        <updated>2019-12-13T09:30:45.000Z</updated>
-        <summary type="html"><![CDATA[<ul>
-<li>HTML5为HTML增加了很多新元素。</li>
-<li>&lt;section&gt;、&lt;article&gt;、&lt;aside&gt;、&lt;nav&gt;，&lt;header&gt;和&lt;footer&gt;都是帮助你建立页面结构的新元素，与使用&lt;div&gt;相比，它们可以提供更多含义。</li>
-<li>&lt;section&gt;用于对相关的内容进行分组。</li>
-</ul>
-]]></summary>
-        <content type="html"><![CDATA[<ul>
-<li>HTML5为HTML增加了很多新元素。</li>
-<li>&lt;section&gt;、&lt;article&gt;、&lt;aside&gt;、&lt;nav&gt;，&lt;header&gt;和&lt;footer&gt;都是帮助你建立页面结构的新元素，与使用&lt;div&gt;相比，它们可以提供更多含义。</li>
-<li>&lt;section&gt;用于对相关的内容进行分组。</li>
 </ul>
 ]]></content>
     </entry>
