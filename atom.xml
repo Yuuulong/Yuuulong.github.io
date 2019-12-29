@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yuuulong.com</id>
     <title>yuuulong</title>
-    <updated>2019-12-27T07:03:19.194Z</updated>
+    <updated>2019-12-29T14:50:25.195Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yuuulong.com"/>
     <link rel="self" href="https://yuuulong.com/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://yuuulong.com/images/avatar.png</logo>
     <icon>https://yuuulong.com/favicon.ico</icon>
     <rights>All rights reserved 2019, yuuulong</rights>
+    <entry>
+        <title type="html"><![CDATA[为什么有些专家的判断是狗屎？]]></title>
+        <id>https://yuuulong.com/post/sPeWKpK0D</id>
+        <link href="https://yuuulong.com/post/sPeWKpK0D">
+        </link>
+        <updated>2019-12-29T14:42:25.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CSS Grid 网格布局教程]]></title>
         <id>https://yuuulong.com/post/yFEIXCYKG</id>
@@ -164,27 +171,6 @@ display属性指定网页的布局。两个重要的布局，我已经介绍过�
 <li>HTML5为HTML增加了很多新元素。</li>
 <li>&lt;section&gt;、&lt;article&gt;、&lt;aside&gt;、&lt;nav&gt;，&lt;header&gt;和&lt;footer&gt;都是帮助你建立页面结构的新元素，与使用&lt;div&gt;相比，它们可以提供更多含义。</li>
 <li>&lt;section&gt;用于对相关的内容进行分组。</li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[前端基础第十一章]]></title>
-        <id>https://yuuulong.com/post/Dfj40tlqJ</id>
-        <link href="https://yuuulong.com/post/Dfj40tlqJ">
-        </link>
-        <updated>2019-12-13T09:29:46.000Z</updated>
-        <summary type="html"><![CDATA[<ul>
-<li>浏览器使用流在页面中放置元素。</li>
-<li>块元素从上向下流，各元素之间有一个换行。默认的，每个块元素会 占浏览器窗口的整个宽度。</li>
-<li>内联元素在块元素内部从左上方流向有下方。如果需要多行，浏览器会换行，在垂直方向上扩展外围块元素，来包含这些内联元素。</li>
-<li>正常页面流中两个块元素上下相邻的外边距会折叠为最大外边距的大小， 或者如果两个外边距大小相同，则会折叠为一个外边距。</li>
-</ul>
-]]></summary>
-        <content type="html"><![CDATA[<ul>
-<li>浏览器使用流在页面中放置元素。</li>
-<li>块元素从上向下流，各元素之间有一个换行。默认的，每个块元素会 占浏览器窗口的整个宽度。</li>
-<li>内联元素在块元素内部从左上方流向有下方。如果需要多行，浏览器会换行，在垂直方向上扩展外围块元素，来包含这些内联元素。</li>
-<li>正常页面流中两个块元素上下相邻的外边距会折叠为最大外边距的大小， 或者如果两个外边距大小相同，则会折叠为一个外边距。</li>
 </ul>
 ]]></content>
     </entry>
