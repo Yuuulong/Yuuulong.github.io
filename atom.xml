@@ -2,14 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yuuulong.com</id>
     <title>yuuulong</title>
-    <updated>2019-12-29T15:03:43.797Z</updated>
+    <updated>2020-01-14T07:14:51.222Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yuuulong.com"/>
     <link rel="self" href="https://yuuulong.com/atom.xml"/>
     <subtitle>&lt;h3&gt;温故而知新&lt;/h3&gt;</subtitle>
     <logo>https://yuuulong.com/images/avatar.png</logo>
     <icon>https://yuuulong.com/favicon.ico</icon>
-    <rights>All rights reserved 2019, yuuulong</rights>
+    <rights>All rights reserved 2020, yuuulong</rights>
+    <entry>
+        <title type="html"><![CDATA[TypeScript的入门]]></title>
+        <id>https://yuuulong.com/post/h90abnXJ7</id>
+        <link href="https://yuuulong.com/post/h90abnXJ7">
+        </link>
+        <updated>2020-01-05T04:06:43.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[为什么医生总是让你做各种检查？]]></title>
         <id>https://yuuulong.com/post/dqdM_Fm_q</id>
@@ -154,29 +161,6 @@ display属性指定网页的布局。两个重要的布局，我已经介绍过�
 <li>method属性包含发送数据的方法，可以是POST或GET。</li>
 <li>POST打包表单数据，并把它作为请求的一部分发送到服务器。</li>
 <li>GET打包表单数据，并把数据追加到URL。</li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[前端基础第十三章]]></title>
-        <id>https://yuuulong.com/post/jYC4kZDMg</id>
-        <link href="https://yuuulong.com/post/jYC4kZDMg">
-        </link>
-        <updated>2019-12-13T09:33:24.000Z</updated>
-        <summary type="html"><![CDATA[<ul>
-<li>HTML表格用来建立表格数据结构。</li>
-<li>HTML表格元素&lt;table&gt;、&lt;tr&gt;、&lt;th&gt;和&lt;td&gt;一起来创建一个表格。</li>
-<li>&lt;table&gt;元素定义并包围整个表格。</li>
-<li>表格使用&lt;tr&gt;元素按行定义。</li>
-<li>每行包含一个或多个数据单元格，分别用&lt;td&gt;元素定义。</li>
-</ul>
-]]></summary>
-        <content type="html"><![CDATA[<ul>
-<li>HTML表格用来建立表格数据结构。</li>
-<li>HTML表格元素&lt;table&gt;、&lt;tr&gt;、&lt;th&gt;和&lt;td&gt;一起来创建一个表格。</li>
-<li>&lt;table&gt;元素定义并包围整个表格。</li>
-<li>表格使用&lt;tr&gt;元素按行定义。</li>
-<li>每行包含一个或多个数据单元格，分别用&lt;td&gt;元素定义。</li>
 </ul>
 ]]></content>
     </entry>

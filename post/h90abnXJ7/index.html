@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>前端基础第十二章 | yuuulong</title>
+<title>TypeScript的入门 | yuuulong</title>
 <meta name="description" content="&lt;h3&gt;温故而知新&lt;/h3&gt;">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,53 +92,64 @@
       <div class="content-container">
         <div class="post-detail">
           
-            <div class="feature-container" style="background-image: url('https://yuuulong.com/post-images/JvzpggJcc.jpg')">
-            </div>
-          
-          <h2 class="post-title">前端基础第十二章</h2>
+          <h2 class="post-title">TypeScript的入门</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2019-12-13</span>
-            
-              <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="https://yuuulong.com/tag/html">
-                    html
-                    
-                  </a>
-                
-              </span>
+            <span><i class="icon-calendar-outline"></i> 2020-01-05</span>
             
           </div>
           <div class="post-content">
-            <ul>
-<li>HTML5为HTML增加了很多新元素。</li>
-<li>&lt;section&gt;、&lt;article&gt;、&lt;aside&gt;、&lt;nav&gt;，&lt;header&gt;和&lt;footer&gt;都是帮助你建立页面结构的新元素，与使用&lt;div&gt;相比，它们可以提供更多含义。</li>
-<li>&lt;section&gt;用于对相关的内容进行分组。</li>
-</ul>
-<!-- more -->
-<ul>
-<li>&lt;article&gt;用于类似博客帖子，论坛帖子和新闻报道等独立的内容。</li>
-<li>&lt;aside&gt;用于组织网站导航链接。</li>
-<li>&lt;header&gt;将标题、logo和署名等通常放在页面或区块最上方的内容住址在一起。</li>
-<li>&lt;footer&gt; 将诸如文档信息、法律措辞和版权说明等通常放在也页面或区块最下方的内容组织在一起。</li>
-<li>&lt;time&gt;也是HTML5中的一个新元素。这个元素 用来标记时间和日期。</li>
-<li>&lt;div&gt;仍然用于建立结构。它通常将元素组织在一起来指定样式， 或者有些内容可能不适合放在HTML5中哪些与结构相关的新元素中，这些内容可以使用&lt;div&gt;创建结构。</li>
-<li>较早的浏览器不支持新的HTML5元素，所以一定要知道主要用户使用哪些浏览器访问你的Web页面，除非能确保新元素对你的用户适用， 否则不要贸然使用这些新元素。</li>
-<li>&lt;video&gt;是一个新的HTML元素，用于 为页面增加视频。</li>
-<li>视频编码是用来创建视频文件的编码。常用的编码包括h.264 、Vp8和Theora。</li>
-<li>视频容器文件包含视频、音频和元数据。流行的容器格式包括ＭＰ４、ＯＧＧ和ＷｅｂＭ。</li>
-<li>要提供多个视频源文件，确保你的用户可以在他们的浏览器中观看你的视频文件。</li>
-</ul>
+            <h2 id="安装typescript安装到全局">安装typescript安装到全局</h2>
+<p><code>npm i typescript -g</code><br>
+<strong>创建文件1.ts</strong><br>
+<code>console.log('Yo');</code><br>
+<strong>编译1.ts</strong><br>
+<code>tsc 1.ts</code><br>
+<strong>此时目录中应该出现1.js</strong><br>
+<code>console.log('Yo');</code><br>
+<strong>使用node运行1.js</strong><br>
+<code>node 1.js Yo</code><br>
+<strong>使用 -w 参数监控变化并自动编译</strong><br>
+<code>tsc -w 1.ts</code></p>
+<h2 id="数据类型">数据类型</h2>
+<p>JavaScript 的类型分为两种：原始数据类型（Primitive data types）和对象类型（Object types）。<br>
+原始数据类型包括：布尔值、数值、字符串、null、undefined 以及 ES6 中的新类型 Symbol<br>
+<strong>布尔值</strong><br>
+<code>let isDone: boolean = false;</code><br>
+<strong>数值</strong><br>
+<code>let decLiteral: number = 6;</code><br>
+<strong>字符串</strong><br>
+<code>let myName: string = 'Tom';</code><br>
+<strong>空值</strong><br>
+<code>let unusable: void = undefined;</code><br>
+<strong>Null 和 Undefined</strong><br>
+<code>let u: undefined = undefined;</code><br>
+<code>let n: null = null;</code><br>
+<strong>任意值类型</strong><br>
+<code>let myFavoriteNumber: any = 'seven';</code><br>
+<strong>类型推论</strong><br>
+<code>let myFavoriteNumber = 'seven';</code><br>
+<code>未定义的类型，会被推测为string类型</code><br>
+<strong>联合类型</strong><br>
+<code>let myFavoriteNumber: string | number;</code><br>
+<strong>对象的类型——接口</strong></p>
+<pre><code>interface Person {
+    name: string;
+    age: number;
+}
+let tom: Person = {
+    name: 'Tom',
+    age: 25
+};
+</code></pre>
 
           </div>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://yuuulong.com/post/Dfj40tlqJ">
+            <a class="purple-link" href="https://yuuulong.com/post/dqdM_Fm_q">
               <h3 class="post-title">
-                下一篇：前端基础第十一章
+                下一篇：为什么医生总是让你做各种检查？
               </h3>
             </a>
           </div>
